@@ -61,9 +61,9 @@ export default function Cards() {
       h="430px"
       align="center"
       justify="center"
+      key={item.id}
     >
       <Flex
-        key={item.id}
         w="220px"
         h="330px"
         bg={item.background}
