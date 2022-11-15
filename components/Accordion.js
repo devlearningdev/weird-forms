@@ -26,7 +26,7 @@ export default function AccordionMenu() {
           <h2>
             <AccordionButton>
               <Box flex="1" textAlign="center" fontSize="xl">
-                What's the supply ?
+                What is the supply ?
               </Box>
               <AccordionIcon />
             </AccordionButton>

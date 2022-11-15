@@ -33,7 +33,7 @@ const devs = [
 ];
 
 const displayDevs = devs.map((item) => (
-  <Center py={12}>
+  <Center py={12} key={item.name}>
     <Box
       role={"group"}
       p={6}
