@@ -53,18 +53,29 @@ export default function Cards() {
 
   const displayNfts = nfts.map((item) => (
     <Flex
-      key={item.id}
-      w="250px"
-      h="350px"
-      bg={item.background}
-      justify="center"
+      backgroundImage="./frame2a.png"
+      backgroundPosition="center center"
+      backgroundSize={"contain"}
+      backgroundRepeat="no-repeat"
+      w="350px"
+      h="430px"
       align="center"
-      rounded="10px"
-      boxShadow={item.boxShadow}
-      border={item.border}
-      _hover={{ boxShadow: item.hoverBoxShadow }}
+      justify="center"
     >
-      <Image src={item.img} boxSize="200px"></Image>
+      <Flex
+        key={item.id}
+        w="220px"
+        h="330px"
+        bg={item.background}
+        justify="center"
+        align="center"
+        rounded="10px"
+        boxShadow={item.boxShadow}
+        border={item.border}
+        _hover={{ boxShadow: item.hoverBoxShadow }}
+      >
+        <Image src={item.img} boxSize="200px"></Image>
+      </Flex>
     </Flex>
   ));
 
