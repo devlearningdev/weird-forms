@@ -9,6 +9,7 @@ import {
   Heading,
   Flex,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 export default function AccordionMenu() {
   return (
@@ -18,9 +19,15 @@ export default function AccordionMenu() {
       gap="2rem"
       _dark={{ bgColor: "black" }}
     >
-      <Heading as="h2" mt="5rem">
-        FAQ
-      </Heading>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.2 }}
+      >
+        <Heading as="h2" mt="5rem">
+          FAQ
+        </Heading>
+      </motion.div>
       <Accordion allowToggle w="100%" maxW="6xl">
         <AccordionItem>
           <h2>

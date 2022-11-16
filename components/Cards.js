@@ -100,40 +100,51 @@ export default function Cards() {
 
   return (
     <Center gap="5rem" w="full" flexDirection="column" mt="5rem">
-      <Stack spacing={10} align="center">
-        <Heading as="h2" size="xl" textAlign="center" textShadow="0px 0px 80px">
-          About the collection.
-        </Heading>
-        <Text
-          maxW="6xl"
-          pr="2rem"
-          pl="2rem"
-          color="gray.400"
-          _light={{ color: "gray.500" }}
-          fontSize="xl"
-        >
-          Voluptate ad reprehenderit esse nisi. Officia ut et quis ipsum
-          excepteur qui fugiat duis in irure sit nulla. Do dolore culpa eu quis
-          mollit eu qui voluptate dolore cupidatat eu. Fugiat esse proident
-          laboris est. Sint dolor officia non in aliqua deserunt id consequat ad
-          id tempor minim nulla. Incididunt officia ex aliquip deserunt
-          adipisicing mollit officia ut incididunt veniam magna tempor. Labore
-          esse ex irure eu in non pariatur esse in. Deserunt commodo sit
-          pariatur velit eiusmod nulla eu in esse. In occaecat anim nulla
-          occaecat.
-        </Text>
-        <Button
-          size="md"
-          colorScheme="teal"
-          bg="linear-gradient(90deg, rgba(0, 143, 212, 1) 0%, rgba(238, 130, 238, 1) 100%)"
-          _hover={{
-            bg: "#ffc400",
-            boxShadow: "0px 0px 20px 0px gray",
-          }}
-        >
-          Learn More{" "}
-        </Button>
-      </Stack>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.2 }}
+      >
+        <Stack spacing={10} align="center">
+          <Heading
+            as="h2"
+            size="xl"
+            textAlign="center"
+            textShadow="0px 0px 80px"
+          >
+            About the collection.
+          </Heading>
+          <Text
+            maxW="6xl"
+            pr="2rem"
+            pl="2rem"
+            color="gray.400"
+            _light={{ color: "gray.500" }}
+            fontSize="xl"
+          >
+            Voluptate ad reprehenderit esse nisi. Officia ut et quis ipsum
+            excepteur qui fugiat duis in irure sit nulla. Do dolore culpa eu
+            quis mollit eu qui voluptate dolore cupidatat eu. Fugiat esse
+            proident laboris est. Sint dolor officia non in aliqua deserunt id
+            consequat ad id tempor minim nulla. Incididunt officia ex aliquip
+            deserunt adipisicing mollit officia ut incididunt veniam magna
+            tempor. Labore esse ex irure eu in non pariatur esse in. Deserunt
+            commodo sit pariatur velit eiusmod nulla eu in esse. In occaecat
+            anim nulla occaecat.
+          </Text>
+          <Button
+            size="md"
+            colorScheme="teal"
+            bg="linear-gradient(90deg, rgba(0, 143, 212, 1) 0%, rgba(238, 130, 238, 1) 100%)"
+            _hover={{
+              bg: "#ffc400",
+              boxShadow: "0px 0px 20px 0px gray",
+            }}
+          >
+            Learn More{" "}
+          </Button>
+        </Stack>
+      </motion.div>
       <Flex gap="2rem" w="full" wrap="wrap" justify="center">
         {displayNfts}
       </Flex>
