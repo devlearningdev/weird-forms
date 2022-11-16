@@ -23,6 +23,8 @@ export default function Cards() {
       boxShadow: "1px 1px 10px 2px rgba(223,0,255,1)",
       hoverBoxShadow: "1px 1px 20px 5px rgba(223,0,255,1)",
       border: "thick double rgba(223,0,255,1)",
+      animationX: [0, 10, -10, 0],
+      animationY: [0, 10, 0],
     },
     {
       id: 2,
@@ -32,6 +34,8 @@ export default function Cards() {
       boxShadow: "1px 1px 10px 2px rgba(10,13,198,1)",
       hoverBoxShadow: "1px 1px 20px 5px rgba(10,13,198,1)",
       border: "thick double rgba(10,13,198,1)",
+      animationX: [0, -10, 10, 0],
+      animationY: [0, 10, 0],
     },
     {
       id: 3,
@@ -41,6 +45,8 @@ export default function Cards() {
       boxShadow: "1px 1px 10px 2px rgba(255,196,0,1)",
       hoverBoxShadow: "1px 1px 20px 5px rgba(255,196,0,1)",
       border: "thick double rgba(255,196,0,1)",
+      animationX: [0, 10, -10, 0],
+      animationY: [0, 12, 0],
     },
     {
       id: 4,
@@ -50,12 +56,14 @@ export default function Cards() {
       boxShadow: "1px 1px 10px 2px rgba(100,49,168,1)",
       hoverBoxShadow: "1px 1px 20px 5px rgba(100,49,168,1)",
       border: "thick double rgba(100,49,168,1)",
+      animationX: [0, 0, -10, 0],
+      animationY: [0, 10, 0],
     },
   ];
 
   const displayNfts = nfts.map((item) => (
     <motion.div
-      animate={{ x: [0, 10, -10, 0], y: [0, 10, 0] }}
+      animate={{ x: item.animationX, y: item.animationY }}
       transition={{
         duration: 5,
         repeat: Infinity,

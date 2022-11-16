@@ -12,8 +12,9 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <motion.div
-      animate={{ opacity: 1 }}
-      transition={{ ease: "easeOut", duration: 9 }}
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 3 }}
     >
       <Flex
         w={"full"}
@@ -38,7 +39,9 @@ export default function Hero() {
             >
               Weird Forms NFT Collection !
             </Heading>
+
             <br />
+
             <Text fontSize="2xl" color="white" _light={{ color: "gray.700" }}>
               Tempor labore nisi voluptate aute Lorem tempor amet. Ea non elit
               et tempor minim mollit quis consectetur pariatur elit ut enim non
