@@ -61,6 +61,7 @@ export default function Cards() {
         repeat: Infinity,
         type: "spring",
       }}
+      key={item.id}
     >
       <Flex
         backgroundImage="./frame2a.png"
@@ -71,7 +72,6 @@ export default function Cards() {
         h="430px"
         align="center"
         justify="center"
-        key={item.id}
       >
         <Flex
           w="220px"
