@@ -9,7 +9,9 @@ import {
   Divider,
   Button,
 } from "@chakra-ui/react";
+
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function Cards() {
   const nfts = [
@@ -52,31 +54,40 @@ export default function Cards() {
   ];
 
   const displayNfts = nfts.map((item) => (
-    <Flex
-      backgroundImage="./frame2a.png"
-      backgroundPosition="center center"
-      backgroundSize={"contain"}
-      backgroundRepeat="no-repeat"
-      w="350px"
-      h="430px"
-      align="center"
-      justify="center"
-      key={item.id}
+    <motion.div
+      animate={{ x: [0, 10, -10, 0], y: [0, 10, 0] }}
+      transition={{
+        duration: 5,
+        repeat: Infinity,
+        type: "spring",
+      }}
     >
       <Flex
-        w="220px"
-        h="330px"
-        bg={item.background}
-        justify="center"
+        backgroundImage="./frame2a.png"
+        backgroundPosition="center center"
+        backgroundSize={"contain"}
+        backgroundRepeat="no-repeat"
+        w="350px"
+        h="430px"
         align="center"
-        rounded="10px"
-        boxShadow={item.boxShadow}
-        border={item.border}
-        _hover={{ boxShadow: item.hoverBoxShadow }}
+        justify="center"
+        key={item.id}
       >
-        <Image src={item.img} boxSize="200px"></Image>
+        <Flex
+          w="220px"
+          h="330px"
+          bg={item.background}
+          justify="center"
+          align="center"
+          rounded="10px"
+          boxShadow={item.boxShadow}
+          border={item.border}
+          _hover={{ boxShadow: item.hoverBoxShadow }}
+        >
+          <Image src={item.img} boxSize="200px"></Image>
+        </Flex>
       </Flex>
-    </Flex>
+    </motion.div>
   ));
 
   return (
